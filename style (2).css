@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", "sans-serif";
+  color: #fff;
+}
+svg {
+  fill: #fff;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* min-width: 940px; */
+  background: #000;
+  color: #fff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  position: fixed;
+  border-bottom: 1px solid gray;
+}
+nav a {
+  margin: auto 1rem;
+}
+
+nav a:nth-of-type(1) {
+  margin-left: 0;
+}
+nav a:nth-last-of-type(1) {
+  margin-right: 0;
+}
+.nav-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 2rem;
+}
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.nav-2 {
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+#searchbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 2px;
+  padding: 0.3rem 2rem;
+  padding-top: 0.5rem;
+  width: 250px;
+  height: 1.5rem;
+  justify-content: space-between;
+}
+#text {
+  font-size: 20px;
+  margin-left: -7rem;
+}
+.search-bar svg {
+  height: 1rem;
+}
+a svg {
+  height: 2rem;
+  fill: #fff;
+}
+#logo img {
+  height: 3.5rem;
+}
+.avatar img {
+  margin-top: 0.3rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  padding-top: 5rem;
+  background: #000;
+  border: 1px solid gray;
+  padding-left: 2rem;
+  justify-items: auto;
+  padding-bottom: 1rem;
+}
+.main-area {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.main-area::-webkit-scrollbar {
+  width: 0;
+}
+.side-bar {
+  border-left: 1px solid gray;
+}
+
+.cards {
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  width: 62vw;
+  margin-top: 4rem;
+  gap: 15px;
+}
+.cards div {
+  width: 30vw;
+}
+.cards div img {
+  width: 100%;
+}
+.cards div img:hover {
+  transform: scale(1.08);
+}
+
+.latest-release {
+  margin-top: 1.5rem;
+}
+.box-area {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.thumbnail {
+  display: flex;
+  flex-direction: row;
+}
+.th-img {
+  height: 90px;
+  width: 90px;
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.th-img img {
+  height: 100%;
+  width: 100%;
+}
+.th-img svg {
+  position: absolute;
+  fill: #fff;
+  height: 2rem;
+  z-index: 10;
+  transform: scale(0);
+}
+.th-img img:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  filter: grayscale(80%);
+}
+.th-img img:hover + svg {
+  transform: scale(1);
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ndate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.5rem;
+}
+.time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.popular-artists {
+  margin-top: 1.5rem;
+}
+
+.artists-img {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 20px;
+}
+.artists-img::-webkit-scrollbar {
+  width: 0;
+}
+.art-img {
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.art-img img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+.art-img p {
+  font-size: 0.8rem;
+}
+.music {
+  font-family: "Dancing Script", cursive;
+  background: #2c0735;
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.music-box-head {
+  margin-left: 0.8rem;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-box-head img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+.music-box-head p {
+  font-size: 1.6rem;
+  z-index: 10;
+  position: absolute;
+}
+.music-area {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 20px;
+  align-items: center;
+  margin-top: 1rem;
+}
+.music-area::-webkit-scrollbar {
+  width: 0;
+}
+
+.music-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.music-box img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+.music-box p {
+  z-index: 10;
+  position: absolute;
+}
+.latest-english {
+  margin-top: 1rem;
+}
+.eng-box {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 20px;
+  margin-top: 0.5rem;
+}
+.english-box::-webkit-scrollbar {
+  width: 0;
+}
+.eng-box-card {
+  width: 120px;
+}
+.eng-box-card img {
+  height: 120px;
+  width: 120px;
+}
+.eng-box-card p {
+  margin-top: -0.3rem;
+  font-size: 0.8rem;
+}
+
+.queue {
+  /* border: 2px solid blue; */
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.queue .down {
+  /* border: 2px solid red; */
+  margin-right: 4rem;
+  color: aqua;
+}
+.down svg {
+  fill: aqua;
+}
+
+.side-boxes {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 20px;
+}
+
+.side-boxes::-webkit-scrollbar {
+  height: 0;
+}
+
+.side-box {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.box-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.box-left div {
+  /* border: 2px solid green; */
+  display: flex;
+  margin: 2vw;
+  justify-content: center;
+  align-items: center;
+}
+.box-left span {
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  width: 5rem;
+  margin: 2vw;
+  justify-content: center;
+  align-items: center;
+}
+.box-left span p {
+  font-size: 0.8rem;
+}
+
+.box-left img {
+  height: 90px;
+}
+
+.box-right {
+  margin-right: 4rem;
+  display: flex;
+  align-items: center;
+}
+.box-right svg:hover {
+  cursor: pointer;
+}
